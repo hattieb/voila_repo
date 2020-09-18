@@ -1,0 +1,66 @@
+! pip install pyLDAvis
+! pip install --upgrade snowflake-connector-python
+! pip install koalas
+! pip install pyspark
+! pip install plotly
+! pip install cufflinks
+! pip install snowflake-connector-python asn1crypto==0.24.0
+! pip install azure-storage==0.34.3
+! pip install azure.storage.common
+! pip install -U textblob
+! python -m textblob.download_corpora
+! pip install pyLDAvis
+%matplotlib inline
+a={'ascending':False}
+from collections import Counter
+from textblob import Word
+import plotly.graph_objects as go
+from matplotlib import pyplot as plt
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk.tag import pos_tag
+from nltk.util import ngrams
+from pandas.io import gbq 
+from pyspark.sql import SparkSession,SQLContext
+from scipy import stats
+from scipy.spatial.distance import cdist
+from sklearn import datasets, linear_model,metrics,preprocessing
+from sklearn.cluster import KMeans
+from sklearn.decomposition import NMF, LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from sklearn.linear_model import LinearRegression
+from snowflake.connector import DictCursor
+from urllib.parse import urlparse
+import base64
+import getpass
+import matplotlib.pyplot as plt
+import nltk
+import numpy as np
+import pandas as pd
+import plotly.express as px
+from nltk.stem import PorterStemmer
+import pyspark
+import scipy
+import seaborn as sns
+import sklearn
+import snowflake.connector as con
+import sqlite3
+import string
+import sys
+from pyspark.sql import SQLContext
+import nltk
+nltk.download('punkt')
+import csv
+import string
+import re
+from nltk.util import everygrams
+import pandas as pd
+from collections import Counter
+from itertools import combinations
+nltk.download('stopwords')
+pd.options.display.max_rows = 1000
+pd.set_option('display.max_colwidth', 500)
+sc = pyspark.SparkContext.getOrCreate()
+sqlContext = SQLContext(sc)
